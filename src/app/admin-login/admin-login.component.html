@@ -1,0 +1,53 @@
+
+<div  *ngIf="isSignUp">
+<div class="admin-auth">
+  <h1 class="signup-heading">Admin-Signup</h1>
+  <hr>
+  <div class="signup">
+    <form #adminSignUp="ngForm"  (ngSubmit)="signUp(adminSignUp.value)">
+      <label class="form-label"> Name </label>
+      <input type="text" class="form-control" name="name" placeholder="Enter your name.." ngModel required/>
+
+      <label class="form-label"> Email </label>
+      <input type="text" class="form-control" name="email" placeholder="Enter your email.." ngModel email required/>
+
+      <label class="form-label"> Password </label>
+      <input type="password" class="form-control" name="password" placeholder="Enter password.." ngModel required/>
+
+      <button class="form-button btn btn-primary"> Sign up</button>
+      <br>
+
+    </form>
+  </div>
+
+</div>
+  <p class="al-ac"> Already have an account? <a class="click-here" (click)="loggedin()">Click here! </a></p>
+
+</div>
+
+
+<div  *ngIf="!isSignUp">
+<div class="admin-auth">
+  <div class="error-r">{{loginError}}</div>
+   <h1 class="signup-heading">Admin-Login</h1>
+   <div class="login">
+    <hr>
+  <div class="signup">
+    <form #adminLogin="ngForm"  (ngSubmit)="Login(adminLogin.value)">
+
+
+      <label class="form-label"> Email </label>
+      <input type="text" class="form-control" name="email" placeholder="Enter your email.." ngModel email required/>
+
+      <label class="form-label"> Password </label>
+      <input type="password" class="form-control" name="password" placeholder="Enter password.." ngModel required/>
+
+      <button class="form-button btn btn-primary">Login</button>
+      <br>
+
+    </form>
+  </div>
+  </div>
+</div>
+<p class="al-ac"> Don't have an account? <a class="click-here" (click)="signedin()">Click here! </a></p>
+</div>

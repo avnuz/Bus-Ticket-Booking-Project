@@ -1,1 +1,107 @@
-/* You can add global styles to this file, and also import other style files */
+.main-wrapper{
+  margin-top: 82px !important;
+}
+.admin-auth {
+    width: 300px;
+    margin-left: 434px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px #ddd;
+}
+h1.signup-heading {
+    font-size: larger;
+
+    margin-left: 66px;
+}
+p.al-ac {
+    margin-left: 441px;
+}
+.form-button{
+  margin-top: 5px;
+  margin-left: 106px;
+}
+.error-r{
+  color: red;
+  margin-left: 80px;
+}
+.admin-name{
+  color: white;
+  margin-right: 5px;
+  margin-top: 6px;
+
+}
+.logout{
+display: flex;
+margin-left: 420px;
+}
+a.click-here{
+  cursor: pointer;
+}
+input.form-control.time {
+    margin-top: 24px;
+    width: 105px;
+}
+button.btn.home-main-wrapper {
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 10px
+}
+span.bus-data {
+    margin-left: -884px;
+
+}
+.accordion-button::after {
+  display: none;
+}
+.accordion-item{
+    margin-bottom: 9px;
+
+}
+.accordion-item:not(:first-of-type) {
+    border-top: 1px solid #ddd !important;
+}
+.dropping-point{
+  font-size: small;
+  font-weight: 500;
+}
+.time{
+  font-size: medium;
+  font-weight: 500;
+  width: 30px;
+}
+.rupee{
+   font-size: medium;
+  font-weight: 500;
+}
+.rupee-s{
+  margin-left: 900px;
+}
+.vertical-separator {
+  margin-left: 20px;
+  margin-right: 30px;
+    border-left: 1px solid #ccc; /* Adjust properties as needed */
+    height: 75px; /* Adjust height as needed */
+}
+.seat-image{
+  width: 25px;
+  height: 25px;
+}
+.seat-container.no-gutter{
+  margin-left: 0;
+  margin-right: 0;
+}
+.row.no-gutters {
+    margin-left: 0;
+    margin-right: 979px;
+}
+.row-spacing {
+  margin-top: 10px; /* Adjust the value to control the space between rows */
+}
+/* Importing Bootstrap SCSS file. */
+.marginrighttt{
+  margin-left: 88px;
+  display: flex;
+
+}
+@import 'bootstrap/scss/bootstrap';
+

@@ -1,0 +1,151 @@
+{
+  "admin": [
+    {
+      "id": "aabb",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "12345"
+    }
+  ],
+  "user": [
+    {
+      "id": "277e",
+      "name": "Avani",
+      "email": "avani@gmail.com",
+      "password": "12345"
+    }
+  ],
+  "bus": [
+    {
+      "id": "8071",
+      "name": "Bharath Motors",
+      "from": "Bangalore",
+      "to": "Mangalore",
+      "fromdate": "2024-03-06",
+      "fromtime": "20:16",
+      "Todate": "2024-03-07",
+      "totime": "05:20",
+      "contact": "+91-8296000925",
+      "bus type": "AC Sleeper",
+      "price": "600",
+      "travelhours": "12h 3m",
+      "seat": 15
+    },
+    {
+      "id": "bfbd",
+      "name": "Pragathi Travels",
+      "from": "Mangalore",
+      "to": "Bangalore",
+      "fromdate": "2024-03-15",
+      "fromtime": "20:18",
+      "Todate": "2024-03-14",
+      "totime": "06:18",
+      "contact": "+91-83456789283",
+      "bus type": "Non-Ac Seater",
+      "price": "700",
+      "travelhours": "12h 3m",
+      "seat": 30
+    },
+    {
+      "id": "867b",
+      "name": "Bharath travels",
+      "from": "Chickmagalur",
+      "to": "Mangalore",
+      "fromdate": "2024-03-08",
+      "fromtime": "17:56",
+      "Todate": "2024-03-07",
+      "totime": "05:00",
+      "contact": "+91-845727827234",
+      "bus type": "Non-Ac seater",
+      "price": "650",
+      "travelhours": "12h 3m",
+      "seat": 15
+    }
+  ],
+  "origin": [
+    {
+      "id": "1",
+      "name": "Bangalore"
+    },
+    {
+      "id": "2",
+      "name": "Mangalore"
+    },
+    {
+      "id": "3",
+      "name": "Chickmagalur"
+    },
+    {
+      "id": "4",
+      "name": "Dharwad"
+    },
+    {
+      "id": "5",
+      "name": "Mysore"
+    },
+    {
+      "id": "6",
+      "name": "Madikeri"
+    },
+    {
+      "id": "7",
+      "name": "Hasan"
+    }
+  ],
+  "departures": [
+    {
+      "id": "1",
+      "name": "Bangalore"
+    },
+    {
+      "id": "2",
+      "name": "Mangalore"
+    },
+    {
+      "id": "3",
+      "name": "Chickmagalur"
+    },
+    {
+      "id": "4",
+      "name": "Dharwad"
+    },
+    {
+      "id": "5",
+      "name": "Mysore"
+    },
+    {
+      "id": "6",
+      "name": "Madikeri"
+    },
+    {
+      "id": "7",
+      "name": "Hasan"
+    }
+  ],
+  "bustype": [
+    {
+      "id": "1",
+      "name": "AC"
+    },
+    {
+      "id": "2",
+      "name": "Non-AC"
+    },
+    {
+      "id": "3",
+      "name": "Seater"
+    },
+    {
+      "id": "4",
+      "name": "Sleeper"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "a06e",
+      "seat": 1,
+      "busno": "8071",
+      "userid": "aabb"
+    }
+  ]
+}

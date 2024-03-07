@@ -1,0 +1,35 @@
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+
+      <th scope="col">Name</th>
+      <th scope="col">PickupPoint - Dropping Point</th>
+      <th scope="col">Contact Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let bus of buslist;">
+
+      <td>{{ bus.name }}</td>
+      <td>{{ bus.from }} - {{ bus.to }}</td>
+      <td>{{ bus.contact }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="d-flex justify-content-between p-2">
+ <ngb-pagination
+  [collectionSize]="(collectionSize?.valueOf() ?? 0)"
+  [(page)]="page"
+  [pageSize]="pageSize"
+  (pageChange)="refreshCountries()"
+></ngb-pagination>
+
+  <select class="form-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshCountries()">
+    <option [ngValue]="2">2 items per page</option>
+    <option [ngValue]="4">4 items per page</option>
+    <option [ngValue]="6">6 items per page</option>
+  </select>
+<!-- </div> -->
