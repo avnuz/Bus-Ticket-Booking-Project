@@ -22,13 +22,13 @@ loginError: string ='';
   }
   login(data: login){
     this.user.login(data);
-    this.user.isLoginError.subscribe((isError: any)=>{
-      if(isError=true){
-        this.loginError="Incorrect email or password";
-      }else{
-        this.loginError='';
-      }
-    })
+    // this.user.isLoginError.subscribe((isError: any)=>{
+    //   if(isError=true){
+    //     this.loginError="Incorrect email or password";
+    //   }else{
+    //     this.loginError='';
+    //   }
+    // })
 
   }
   signedin(){

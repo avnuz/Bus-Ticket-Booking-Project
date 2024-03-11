@@ -7,6 +7,7 @@
         "bustype",
         "buton",
         "Canactivate",
+        "fromplace",
         "inteface",
         "loggedin",
         "Logincan",

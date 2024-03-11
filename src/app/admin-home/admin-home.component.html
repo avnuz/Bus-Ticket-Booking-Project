@@ -15,8 +15,19 @@
 	</div>
 </div>
 </div> -->
+<h4>Bus List</h4>
+<h6>Search:</h6>
+<form #searchBus="ngForm" (ngSubmit)="onSubmit(searchBus.value)">
+  <label for="fromplace"> From: </label>
+  <input type="text" class="form-control" ngModel placeholder="From Place" name="fromplace" to="fromplace">
+  <label for="toplace"> To: </label>
+  <input type="text" class="form-control" ngModel placeholder="To Place" name="toplace" id="toplace">
+  <input type="date" class="form-control mt-3" name="date" ngModel >
+  <button class="btn btn-primary mt-3 justify-content-center" type="submit">Search</button>
+</form>
 
-<div ngbAccordion [closeOthers]="true">
+<div *ngIf="!isSearch ">
+<div ngbAccordion [closeOthers]="true" class="mt-3">
   <div
     *ngFor="let bus of busDetails; trackBy: trackByFn"
     ngbAccordionItem
@@ -79,12 +90,135 @@
                   [userid]="userid"
                   [Bus]="bus"
                   [ngClass]="{ marginrighttt: i % 3 === 0 }"
+                  (bookingdata)="handleBookingData($event)"
+                  (deselectedSeat)="getDeselectedSeat($event)"
                 ></app-seat>
+
+
+
+
+
+
               </div>
             </div>
           </div>
+          <div class="row main-pay" *ngIf="seatsSelected > 0">
+                <div class="col-md-8">
+                  <div *ngIf="seatsSelected===1">
+                      {{seatsSelected}} seat selected
+                  </div>
+                  <div *ngIf="seatsSelected >1">
+                      {{seatsSelected}} seats are selected
+                  </div>
+
+                </div>
+                <div class="col-md-3">
+                  <button class="btn btn-primary"  (click)="gotoPayment()" >Proceed for payment</button>
+                </div>
+              </div>
         </ng-template>
       </div>
     </div>
   </div>
+</div>
+
+</div>
+
+
+<div *ngIf="isSearch">
+<div ngbAccordion [closeOthers]="true" class="mt-3">
+  <div
+    *ngFor="let bus of filteredData; trackBy: trackByFn"
+    ngbAccordionItem
+    class="accordion-item"
+  >
+    <h2 ngbAccordionHeader>
+      <button (click)="generateSeatArray(bus.seat, bus)" ngbAccordionButton>
+        <div class="row mr-3">
+          <div class="col-md-12">
+            {{ bus.name }}
+          </div>
+        </div>
+        <div class="vertical-separator"></div>
+
+        <div class="row ml-3">
+          <div class="col-md-8">
+            <span class="time">
+              <b> {{ bus.fromtime }} </b> - {{ bus.totime }}({{
+                bus.travelhours
+              }})</span
+            >
+          </div>
+
+          <div class="col-md-12">
+            <span class="dropping-point">{{ bus.from }} - {{ bus.to }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="">
+              From
+              <span class="rupee">
+                {{ bus.price | currency : "INR" : "symbol-narrow" }}</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <span> {{ bus.bustype }} </span>
+          </div>
+        </div>
+
+        <br />
+      </button>
+    </h2>
+    <div ngbAccordionCollapse>
+      <div ngbAccordionBody>
+        <ng-template>
+          <div *ngIf="seats" class="seat-container">
+            <div class="row no-gutters">
+              <div
+                class="col-md-4 glutters"
+                *ngFor="let seat of seats; let i = index"
+              >
+                <app-seat
+                  [seat]="i"
+                  [busid]="bus.id"
+                  [userid]="userid"
+                  [Bus]="bus"
+                  [ngClass]="{ marginrighttt: i % 3 === 0 }"
+                  (bookingdata)="handleBookingData($event)"
+                  (deselectedSeat)="getDeselectedSeat($event)"
+                ></app-seat>
+
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+          <div class="row main-pay" *ngIf="seatsSelected > 0">
+                <div class="col-md-8">
+                  <div *ngIf="seatsSelected===1">
+                      {{seatsSelected}} seat selected
+                  </div>
+                  <div *ngIf="seatsSelected >1">
+                      {{seatsSelected}} seats are selected
+                  </div>
+
+                </div>
+                <div class="col-md-3">
+                  <button class="btn btn-primary"  (click)="gotoPayment()" >Proceed for payment</button>
+                </div>
+              </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div>

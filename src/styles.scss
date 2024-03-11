@@ -103,5 +103,112 @@ span.bus-data {
   display: flex;
 
 }
+.row.main-pay {
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 1px 1px #ddd;
+    margin: 12px;
+    padding: 13px;
+    position: relative;
+}
+.left-vertical {
+    border: 1px solid #ddd;
+    margin-top: 13px;
+    margin-left: 30px;
+}
+.right-vertical{
+    border: 1px solid #ddd;
+    margin-top: 13px;
+        margin-right: 30px;
+
+}
+.bus-name{
+  align-content: center;
+  font-size: medium;
+
+}
+img.arrow{
+  width: 20px;
+  height: 20px;
+
+}
+.contact {
+    margin: 29px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    position: relative;
+}
+.passenger {
+    margin: 29px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    position: relative;
+    height: 900px;
+
+}
+// .passenger-details{
+// height: 500px; /* Set the maximum height */
+//     overflow-y: auto; /* Enable vertical scrolling */
+// }
+span.passenger-title{
+  font-size: large;
+  font-weight: 100;
+}
+
+.contact-desc{
+  font-size: small;
+}
+.email-title{
+  font-size: small
+}
+.email-border{
+  border: 1px solid #858282;
+  border-radius: 10px;
+  padding: 2px;
+}
+.tax{
+  font-size: small;
+}
+.row.pay {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: sticky;
+}
+button.submit-btn{
+  border-radius: 100px;
+
+
+}
+.amt{
+  font-size: large;
+  font-weight: 200;
+  font-style: normal;
+}
+.pay-wrapper {
+  position: relative;
+  z-index: 1;
+  bottom: 0 !important;
+  position: fixed !important;
+  background-color: white;
+  width: 180vh;
+  margin-left: -68px !important;
+
+}
+
+.pay.sticky-top {
+  top: 0;
+}
+.main-list{
+  list-style: none;
+}
+img.profile-img {
+    height: 254px;
+}
+.name{
+  text-align: center;
+}
 @import 'bootstrap/scss/bootstrap';
 

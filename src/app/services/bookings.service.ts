@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { booking } from 'src/dataType';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,11 +11,11 @@ export class BookingsService {
 
   constructor(private http: HttpClient) { }
 
-  addBookings(data: booking){
+  addBookings(data: any){
    return this.http.post(this.bookingUrl, data);
   }
 
   getBookings(){
-    return this.http.get(this.bookingUrl);
+    return this.http.get<booking[]>(this.bookingUrl);
   }
 }

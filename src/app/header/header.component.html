@@ -2,9 +2,9 @@
   <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
     <div class="container">
       <div [ngSwitch]="menuType">
-          <a href="#" *ngSwitchCase="'default'" [routerLink]="['/']"  class="navbar-brand h1 mb-0">My Store</a>
-           <a href="#" *ngSwitchCase="'admin'" [routerLink]="['/admin-home']"  class="navbar-brand h1 mb-0">My Store</a>
-            <a href="#" *ngSwitchCase="'user'" [routerLink]="['/']"  class="navbar-brand h1 mb-0">My Store</a>
+          <a href="#" *ngSwitchCase="'default'" [routerLink]="['/admin-home']"  class="navbar-brand h1 mb-0">Bus Ticket Booking</a>
+           <a href="#" *ngSwitchCase="'admin'" [routerLink]="['/admin-home']"  class="navbar-brand h1 mb-0">Bus Ticket Booking</a>
+            <a href="#" *ngSwitchCase="'user'" [routerLink]="['/admin-home']"  class="navbar-brand h1 mb-0">Bus Ticket Booking</a>
       </div>
 
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,7 @@
         <div [ngSwitch]="menuType">
           <ul class="navbar-nav" *ngSwitchCase="'default'">
             <li class="nav-item active">
-              <a href="" class="nav-link">Home</a>
+              <a routerLink="/admin-home" class="nav-link">Home</a>
             </li>
 
             <li class="nav-item active">
@@ -63,7 +63,7 @@
             <a routerLink="/Bookings" class="nav-link"> Bookings</a>
           </li>
           <li class="nav-item active">
-            <a routerLink="/" class="nav-link">My Account</a>
+            <a routerLink="/my-account" class="nav-link">My Account</a>
           </li>
           <div class="logout">
             <span class="admin-name">{{userName}}</span>

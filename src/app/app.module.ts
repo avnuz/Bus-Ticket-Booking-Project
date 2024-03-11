@@ -21,6 +21,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbPaginationModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { SeatComponent } from './seat/seat.component';
+import { BusTicketPaymentComponent } from './bus-ticket-payment/bus-ticket-payment.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { SeatComponent } from './seat/seat.component';
     UserAuthComponent,
     BookingsComponent,
     MyAccountComponent,
-    SeatComponent
+    SeatComponent,
+    BusTicketPaymentComponent
   ],
   imports: [
     BrowserModule,

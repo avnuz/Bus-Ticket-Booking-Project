@@ -1,1 +1,81 @@
-<p>my-account works!</p>
+<div class="row">
+  <div class="col-md-4 name">
+    <img  class="profile-img" src="../../../assets/user (2).png" alt="user">
+    <div >
+      <h5>{{username}}</h5>
+      <h6>Email : {{ email}} </h6>
+    </div>
+
+
+  </div>
+  <div class="col-md-8">
+    <h4> Ticket Details: </h4>
+
+    <div ngbAccordion [closeOthers]="true">
+  <div
+    *ngFor="let bus of busDetails"
+    ngbAccordionItem
+    class="accordion-item"
+  >
+    <h2 ngbAccordionHeader>
+      <button (click)="getPassengerDetails(bus.id)" ngbAccordionButton>
+        <div class="row mr-3">
+          <div class="col-md-12">
+            {{ bus.name }}
+          </div>
+        </div>
+        <div class="vertical-separator"></div>
+
+        <div class="row ml-3">
+          <div class="col-md-8">
+            <span class="time">
+              <b> {{ bus.fromtime }} </b> - {{ bus.totime }}({{
+                bus.travelhours
+              }})</span
+            >
+          </div>
+
+          <div class="col-md-12">
+            <span class="dropping-point">{{ bus.from }} - {{ bus.to }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="">
+              From
+              <span class="rupee">
+                {{ bus.price | currency : "INR" : "symbol-narrow" }}</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <span> {{ bus.bustype }} </span>
+          </div>
+        </div>
+
+        <br />
+      </button>
+    </h2>
+    <div ngbAccordionCollapse>
+      <div ngbAccordionBody>
+        <ng-template>
+
+          <ul class="main-list" *ngFor="let pass of passengerDetails; index as i;">
+            <div *ngIf="pass.name">
+              <li>
+              <h6>Passenger {{i+1}}</h6>
+              {{pass.name}} : Seat No - <b> {{pass.seat}} </b>
+              </li>
+            </div>
+
+          </ul>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>

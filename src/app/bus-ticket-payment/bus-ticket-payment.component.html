@@ -1,0 +1,94 @@
+<div class="card" *ngFor="let bus of busDetails">
+  <div class="card-title">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="left-vertical"></div>
+      </div>
+      <div class="col-md-2 bus-name">
+        {{ bus.name }}
+      </div>
+      <div class="col-md-5">
+        <div class="right-vertical"></div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-3">
+        <div>
+          <b> {{ bus.fromdate }} </b> <span> . </span>
+          <b> {{ bus.fromtime }} </b>
+        </div>
+
+        {{ bus.from }}
+      </div>
+      <div class="col-md-2">
+        <img class="arrow" src="../../assets/next.png" alt="arrow" />
+      </div>
+      <div class="col-md-3">
+        <div>
+          <b>{{ bus.Todate }} </b> <span> . </span> <b> {{ bus.totime }} </b>
+        </div>
+        {{ bus.to }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contact">
+  <div>
+    <h3>Contact Details</h3>
+  </div>
+  <p class="contact-desc">Your Ticket and bus details will be sent here</p>
+
+  <div class="email-border">
+    <div>
+      <span class="email-title"> Email ID </span>
+    </div>
+    <div>
+      <h6>{{ userEmail }}</h6>
+    </div>
+  </div>
+</div>
+
+<div class="passenger">
+  <h3>Passenger Information</h3>
+  <div class="passenger-details">
+   <form #passengerDetails="ngForm" (submit)="getPassengerDetails(passengerDetails.value)">
+      <div *ngFor="let passenger of receivedBookingData; let i = index">
+        <div>
+          <span class="passenger-title">
+            <b><u> Passenger {{ i + 1 }} (seat no: {{passenger.seat}})</u></b>
+          </span>
+        </div>
+
+        <label class="form-label" for="name{{i}}">Name</label>
+        <input type="text" id="name{{i}}" class="form-control" name="name{{i}}" [(ngModel)]="passenger.name" required />
+
+        <label class="form-label" for="contact{{i}}">Contact</label>
+        <input type="text" id="contact{{i}}" class="form-control" name="contact{{i}}" [(ngModel)]="passenger.contact" required />
+
+        <label class="form-label" for="age{{i}}">Age</label>
+        <input type="number" id="age{{i}}" class="form-control" name="age{{i}}" [(ngModel)]="passenger.age" required />
+      </div>
+
+      <div class="container-fluid">
+        <div class="row pay-wrapper">
+          <div class="col-md-12">
+            <div class="row pay">
+              <div class="col-md-8">
+                <span><h4>Amount:</h4></span>
+                <div class="tax">Tax Excluded</div>
+              </div>
+              <div class="amt col-md-4">
+                <b>{{ amount | currency : "INR" : "symbol-narrow" }}</b>
+              </div>
+              <button class="submit-btn btn btn-primary" type="submit">Pay</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

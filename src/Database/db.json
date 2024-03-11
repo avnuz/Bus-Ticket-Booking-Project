@@ -23,7 +23,7 @@
       "to": "Mangalore",
       "fromdate": "2024-03-06",
       "fromtime": "20:16",
-      "Todate": "2024-03-07",
+      "todate": "2024-03-07",
       "totime": "05:20",
       "contact": "+91-8296000925",
       "bus type": "AC Sleeper",
@@ -142,10 +142,109 @@
   ],
   "bookings": [
     {
-      "id": "a06e",
-      "seat": 1,
+      "id": "b573",
+      "seat": 2,
+      "busno": "bfbd",
+      "userid": "aabb",
+      "name": "Avani",
+      "contact": "8296000925",
+      "age": 25
+    },
+    {
+      "id": "b572",
+      "seat": 0,
+      "busno": "bfbd",
+      "userid": "aabb",
+      "name": "chaithra",
+      "contact": "8296000925",
+      "age": 25
+    },
+    {
+      "id": "84de",
+      "seat": 6,
       "busno": "8071",
-      "userid": "aabb"
+      "userid": "aabb",
+      "fromdate": "2024-03-06",
+      "todate": "2024-03-07",
+      "fromtime": "20:16",
+      "totime": "05:20",
+      "name": "Avani",
+      "contact": "8296000925",
+      "age": 25
+    },
+    {
+      "id": "3290",
+      "seat": 9,
+      "busno": "8071",
+      "userid": "aabb",
+      "fromdate": "2024-03-06",
+      "todate": "2024-03-07",
+      "fromtime": "20:16",
+      "totime": "05:20",
+      "name": "chaithra",
+      "contact": "8296000925",
+      "age": 25
+    },
+    {
+      "id": "4717",
+      "seat": 3,
+      "busno": "867b",
+      "userid": "277e",
+      "fromdate": "2024-03-08",
+      "fromtime": "17:56",
+      "totime": "05:00",
+      "name": "chaithra s",
+      "contact": "8296000925",
+      "age": 30
+    },
+    {
+      "id": "cafa",
+      "seat": 5,
+      "busno": "867b",
+      "userid": "277e",
+      "fromdate": "2024-03-08",
+      "fromtime": "17:56",
+      "totime": "05:00",
+      "name": "Avani Nayak",
+      "contact": "8296000925",
+      "age": 25
+    },
+    {
+      "id": "28a7",
+      "seat": 17,
+      "busno": "bfbd",
+      "userid": "277e",
+      "fromdate": "2024-03-15",
+      "fromtime": "20:18",
+      "totime": "06:18",
+      "name": "Avani Nayak",
+      "contact": "8296000925",
+      "age": 25
+    },
+    {
+      "id": "0d27",
+      "seat": 15,
+      "busno": "bfbd",
+      "userid": "277e",
+      "fromdate": "2024-03-15",
+      "fromtime": "20:18",
+      "totime": "06:18",
+      "name": "chaithra s",
+      "contact": "8296000925",
+      "age": 30
+    },
+    {
+      "id": "c0d1",
+      "seat": 14,
+      "busno": "8071",
+      "userid": "277e",
+      "fromdate": "2024-03-06",
+      "Todate": "2024-03-07",
+      "fromtime": "20:16",
+      "totime": "05:20",
+      "name": "Manvith",
+      "contact": "8296000925",
+      "age": 25
     }
   ]
 }

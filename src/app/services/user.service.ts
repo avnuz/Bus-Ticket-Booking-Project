@@ -22,7 +22,8 @@ export class UserService {
 
    })
 
-  }
+  };
+
   login(data:login){
     this.http.get<signUp[]>(`http://localhost:3000/user?email=${data.email}&password=${data.password}`,
     {observe:'response'}

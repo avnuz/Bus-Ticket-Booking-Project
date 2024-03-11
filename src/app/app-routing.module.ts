@@ -10,11 +10,13 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
 import { BookingsComponent } from './bookings/bookings.component';
 import { canActivateAuthGuard } from './guards/canactivate.guard';
 import { LogincanActivateAuthGuard } from './guards/login-canactivate.guard';
+import { BusTicketPaymentComponent } from './bus-ticket-payment/bus-ticket-payment.component';
+import { MyAccountComponent } from './components/my-account/my-account.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: AdminHomeComponent
   },
 
 
@@ -51,6 +53,14 @@ const routes: Routes = [
     canActivate: [LogincanActivateAuthGuard]
 
   },
+  {
+    path: 'payment',
+    component: BusTicketPaymentComponent
+  },
+  {
+    path: 'my-account',
+    component: MyAccountComponent
+  }
 
 ];
 

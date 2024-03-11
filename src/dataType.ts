@@ -10,22 +10,22 @@ export interface login {
   password: String;
 }
 export interface bus {
+  name: any;
   id: any;
-seat: any;
-totime: any;
-fromtime: any;
-  name: string;
+  seat: any;
+  totime: any;
+  fromtime: any;
+
   pickup: string;
   dropping: string;
-  fromdate: Date;
-  todate: Date;
+  fromdate: string;
+  Todate: string;
   from: Time;
   to: Time;
   bustype: string;
   contact: string;
   price: string;
   travelhours: string | undefined;
-
 }
 export interface place{
   id: string;
@@ -35,9 +35,26 @@ export interface bustype{
   id: string;
   name: string;
 }
-export interface booking{
+export interface booking {
   id: string;
-  seatno: number;
-  userid: number;
-  busid: number;
+  seat: number;
+  userid: string;
+  busno: number;
+  name: string;
+  contact: string;
+  age: number;
+  busname: string;
+  fromdate: string;
+  todate: string;
+  from: Time;
+  to: Time;
+  bustype: string;
+
+  price: string;
+  travelhours: string | undefined;
+}
+export interface PassengerDetails {
+  name: string;
+  contact: string; // Assuming contact is a string
+  age: number;
 }
