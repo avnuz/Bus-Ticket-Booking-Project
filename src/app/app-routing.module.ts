@@ -16,52 +16,52 @@ import { MyAccountComponent } from './components/my-account/my-account.component
 const routes: Routes = [
   {
     path: '',
-    component: AdminHomeComponent
+    component: AdminHomeComponent,
   },
-
 
   {
     path: 'user-Login',
-    component: UserAuthComponent
+    component: UserAuthComponent,
   },
   {
     path: 'Bookings',
-    component: BookingsComponent
+    component: BookingsComponent,
+    canActivate: [canActivateAuthGuard]
   },
   {
-    path:'admin-home',
-    component:AdminHomeComponent
+    path: 'admin-home',
+    component: AdminHomeComponent,
   },
   {
     path: 'admin-add-busdetails',
     component: AdminAddBusdetailsComponent,
-    canActivate: [canActivateAuthGuard]
+    canActivate: [canActivateAuthGuard],
   },
   {
     path: 'admin-update-busdetails/:id',
     component: AdminUpdateBusdetailsComponent,
-    canActivate: [canActivateAuthGuard]
+    canActivate: [canActivateAuthGuard],
   },
   {
     path: 'admin-buslist',
     component: AdminBuslistComponent,
-    canActivate: [canActivateAuthGuard]
+    canActivate: [canActivateAuthGuard],
   },
   {
     path: 'admin-login',
     component: AdminLoginComponent,
-    canActivate: [LogincanActivateAuthGuard]
-
+    canActivate: [LogincanActivateAuthGuard],
   },
   {
     path: 'payment',
-    component: BusTicketPaymentComponent
+    component: BusTicketPaymentComponent,
+    canActivate: [canActivateAuthGuard],
   },
   {
     path: 'my-account',
-    component: MyAccountComponent
-  }
-
+    component: MyAccountComponent,
+    canActivate: [canActivateAuthGuard],
+  },
 ];
 
 @NgModule({

@@ -57,13 +57,19 @@ export class AdminHomeComponent implements OnInit {
     this.seatsSelected = this.booking.length;
   }
   gotoPayment() {
-    this.route.navigate(['/payment'], {
-      state: {
-        data: this.booking,
-        seats: this.seatsSelected,
-        seatDetails: this.booking,
-      },
-    });
+    if(localStorage.getItem('admin') || localStorage.getItem('user')){
+       this.route.navigate(['/payment'], {
+         state: {
+           data: this.booking,
+           seats: this.seatsSelected,
+           seatDetails: this.booking,
+         },
+       });
+    }else{
+      alert('please login and book the seats');
+      this.route.navigate(['/user-Login']);
+    }
+
   }
   getBusDetails() {
     this.admin.getBusDetails().subscribe((result) => {

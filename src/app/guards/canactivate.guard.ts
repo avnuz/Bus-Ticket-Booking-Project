@@ -16,7 +16,8 @@ export interface CanComponentDeactivate {
 export class canActivateAuthGuard implements CanActivate{
   constructor(private admin: AdminService, private route: Router) {}
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-   if(localStorage.getItem('admin')){
+   if(localStorage.getItem('admin') || localStorage.getItem('user')  ){
+
 
       return true;
 

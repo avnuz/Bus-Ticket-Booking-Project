@@ -19,11 +19,11 @@
 <h6>Search:</h6>
 <form #searchBus="ngForm" (ngSubmit)="onSubmit(searchBus.value)">
   <label for="fromplace"> From: </label>
-  <input type="text" class="form-control" ngModel placeholder="From Place" name="fromplace" to="fromplace">
+  <input type="text" class="input-search form-control" ngModel placeholder="From Place" name="fromplace" to="fromplace">
   <label for="toplace"> To: </label>
-  <input type="text" class="form-control" ngModel placeholder="To Place" name="toplace" id="toplace">
-  <input type="date" class="form-control mt-3" name="date" ngModel >
-  <button class="btn btn-primary mt-3 justify-content-center" type="submit">Search</button>
+  <input type="text" class="input-search form-control" ngModel placeholder="To Place" name="toplace" id="toplace">
+  <input type="date" class="input-search form-control mt-3" name="date" ngModel >
+  <button class="btn btn-primary mt-3 justify-content-center search-button" type="submit">Search</button>
 </form>
 
 <div *ngIf="!isSearch ">

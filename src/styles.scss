@@ -210,5 +210,12 @@ img.profile-img {
 .name{
   text-align: center;
 }
+button.search-button{
+  width: 100%;
+  border-radius: 25px;
+}
+input.input-search{
+  height: 55px
+}
 @import 'bootstrap/scss/bootstrap';
 
