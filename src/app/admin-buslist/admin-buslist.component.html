@@ -7,6 +7,7 @@
       <th scope="col">Name</th>
       <th scope="col">PickupPoint - Dropping Point</th>
       <th scope="col">Contact Details</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +16,16 @@
       <td>{{ bus.name }}</td>
       <td>{{ bus.from }} - {{ bus.to }}</td>
       <td>{{ bus.contact }}</td>
+       <td>
+        <div class="row">
+          <div class="col-md-3">
+          <button routerLink="/admin-update-busDetail/{{bus.id}}" class="btn btn-warning">Edit</button>
+          </div>
+          <div class="col-md-3">
+            <button (click)="deleteBus(bus.id)" class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+       </td>
     </tr>
   </tbody>
 </table>

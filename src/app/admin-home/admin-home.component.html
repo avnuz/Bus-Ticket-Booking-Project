@@ -45,9 +45,13 @@
         <div class="row ml-3">
           <div class="col-md-8">
             <span class="time">
-              <b> {{ bus.fromtime }} </b> - {{ bus.totime }}({{
+              <b> {{ bus.fromTime }} </b> - {{ bus.toTime }}
+
+              <!-- ({{
                 bus.travelhours
-              }})</span
+              }}) -->
+
+              </span
             >
           </div>
 
@@ -68,7 +72,7 @@
 
         <div class="row">
           <div class="col-md-12">
-            <span> {{ bus.bustype }} </span>
+            <span class="bustype-text"> {{ bus.bustype }} </span>
           </div>
         </div>
 
@@ -144,10 +148,11 @@
         <div class="row ml-3">
           <div class="col-md-8">
             <span class="time">
-              <b> {{ bus.fromtime }} </b> - {{ bus.totime }}({{
+              <b> {{ bus.fromTime }} </b> - {{ bus.toTime }}
+              <!-- ({{
                 bus.travelhours
-              }})</span
-            >
+              }}) -->
+          </span>
           </div>
 
           <div class="col-md-12">
@@ -156,7 +161,7 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <p class="">
+            <p >
               From
               <span class="rupee">
                 {{ bus.price | currency : "INR" : "symbol-narrow" }}</span
@@ -165,9 +170,10 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row bustype">
           <div class="col-md-12">
-            <span> {{ bus.bustype }} </span>
+            <p class="bustype-text">< {{ bus.bustype }} </p>
+
           </div>
         </div>
 

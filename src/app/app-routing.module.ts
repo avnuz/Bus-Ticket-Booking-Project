@@ -21,7 +21,7 @@ const routes: Routes = [
 
   {
     path: 'user-Login',
-    component: UserAuthComponent,
+    component: UserAuthComponent
   },
   {
     path: 'Bookings',
@@ -35,17 +35,13 @@ const routes: Routes = [
   {
     path: 'admin-add-busdetails',
     component: AdminAddBusdetailsComponent,
-    canActivate: [canActivateAuthGuard],
+    canActivate: [canActivateAuthGuard]
   },
-  {
-    path: 'admin-update-busdetails/:id',
-    component: AdminUpdateBusdetailsComponent,
-    canActivate: [canActivateAuthGuard],
-  },
+
   {
     path: 'admin-buslist',
     component: AdminBuslistComponent,
-    canActivate: [canActivateAuthGuard],
+    canActivate: [canActivateAuthGuard]
   },
   {
     path: 'admin-login',
@@ -55,12 +51,17 @@ const routes: Routes = [
   {
     path: 'payment',
     component: BusTicketPaymentComponent,
-    canActivate: [canActivateAuthGuard],
+    canActivate: [canActivateAuthGuard]
   },
   {
     path: 'my-account',
     component: MyAccountComponent,
-    canActivate: [canActivateAuthGuard],
+    canActivate: [canActivateAuthGuard]
+  },
+  {
+    path: 'admin-update-busDetail/:id',
+    component: AdminUpdateBusdetailsComponent,
+    canActivate: [canActivateAuthGuard]
   },
 ];
 

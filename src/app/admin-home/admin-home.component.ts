@@ -12,14 +12,14 @@ import { Router } from '@angular/router';
 })
 export class AdminHomeComponent implements OnInit {
   isCollapsed = false;
-  busDetails: bus[] = [];
+  busDetails: any[] = [];
   userid: any | undefined;
   isSelected: boolean = true;
   booking: any[] = [];
   seatsSelected: any;
   seats: any[] | undefined;
   item: any;
-  filteredData: bus[] =[];
+  filteredData: any[] =[];
   isSearch: boolean = false;
   constructor(
     private admin: AdminService,
@@ -74,6 +74,7 @@ export class AdminHomeComponent implements OnInit {
   getBusDetails() {
     this.admin.getBusDetails().subscribe((result) => {
       this.busDetails = result;
+      console.log(this.busDetails);
     });
   }
   onSubmit(data: any) {

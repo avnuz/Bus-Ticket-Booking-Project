@@ -26,7 +26,7 @@ export class AdminAddBusdetailsComponent implements OnInit {
     })
   }
 
-  addBus(data: bus){
+  addBus(data: any){
       console.log("data::",data);
       this.admin.addBusDetails(data).subscribe((result)=>{
           if(result){

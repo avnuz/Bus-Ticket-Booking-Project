@@ -10,7 +10,7 @@ import { AdminService } from '../services/admin.service';
 })
 export class BookingsComponent implements OnInit {
   bookings: booking[] = [];
-  busDetails: bus[] = [];
+  busDetails: any[] = [];
   passengerDetails: any[] = [];
 
   constructor(

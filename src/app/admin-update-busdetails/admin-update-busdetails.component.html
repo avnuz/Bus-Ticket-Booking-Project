@@ -1,1 +1,120 @@
-<p>admin-update-busdetails works!</p>
+<div class="admin-add-busdetails">
+  <h1 class="addbus-heading">Add bus details</h1>
+
+  <div class="signup">
+    <form #adminUpdatebus="ngForm" (ngSubmit)="editBus(adminUpdatebus.value)">
+      <label class="form-label"> Bus Name </label>
+      <input
+        type="text"
+        class="form-control"
+        name="name"
+        placeholder="Enter Bus name.."
+        ngModel="{{busdetails?.[0]?.name}}"
+        required
+      />
+
+      <label class="form-label"> Pickup Point </label>
+      <select class="form-control" name="from" ngModel="{{busdetails?.[0]?.from}}" required>
+        <option value="">Select Option</option>
+        <option *ngFor="let option of places" [value]="option.name">
+          {{ option.name }}
+        </option>
+      </select>
+      <!-- <input type="text" class="form-control" name="from" placeholder="From place.." ngModel email required/> -->
+
+      <label class="form-label"> Dropping Point </label>
+      <input
+        type="text"
+        class="form-control"
+        name="to"
+        placeholder="To place.."
+        ngModel="{{busdetails?.[0]?.to}}"
+        required
+      />
+
+      <label class="form-label"> Date-Timings </label>
+      <div class="row">
+        <div class="col-md-3">
+          <span>From:</span>
+          <input
+            type="date"
+            class="form-control"
+            name="fromDate"
+            placeholder="To place.."
+            ngModel="{{busdetails?.[0]?.fromDate}}"
+            required
+          />
+        </div>
+        <div class="col-md-3">
+          <input
+            type="time"
+            class="form-control time"
+            name="fromTime"
+            placeholder="To place.."
+            ngModel="{{busdetails?.[0]?.fromTime}}"
+            required
+          />
+        </div>
+
+        <div class="col-md-3">
+          <span>To:</span>
+          <input
+            type="date"
+            class="form-control"
+            name="toDate"
+            placeholder="To place.."
+            ngModel="{{busdetails?.[0]?.ToDate}}"
+            required
+          />
+        </div>
+        <div class="col-md-3">
+          <input
+            type="time"
+            class="form-control time"
+            name="toTime"
+            placeholder="To place.."
+            ngModel="{{busdetails?.[0]?.toTime}}"
+            required
+          />
+        </div>
+      </div>
+
+      <label class="form-label"> Contact Information </label>
+      <input
+        type="text"
+        class="form-control"
+        name="contact"
+        placeholder="Enter contact details.."
+        ngModel="{{busdetails?.[0]?.contact}}"
+        required
+      />
+
+      <label class="form-label"> Price </label>
+      <input
+        type="text"
+        class="form-control"
+        name="price"
+        placeholder="Enter price.."
+        ngModel="{{busdetails?.[0]?.price}}"
+        required
+      />
+
+      <label class="form-label"> Bus type </label>
+      <!-- <select class="form-control" name="bus type" ngModel required>
+        <option value="">Select Option</option>
+        <option *ngFor="let option of busType" [value]="option.name">{{ option.name }}</option>
+      </select> -->
+      <textarea
+        type="dropdown"
+        class="form-control"
+        name="bustype"
+        placeholder="Enter Bus Type(Ac/Non Ac Seater/Sleeper ..).."
+        ngModel="{{busdetails?.[0]?.bustype}}"
+        required
+      ></textarea>
+      <button class="form-button btn btn-primary">Update bus</button>
+      <br />
+    </form>
+  </div>
+</div>
+

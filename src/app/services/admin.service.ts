@@ -58,8 +58,8 @@ export class AdminService {
   getBusType() {
     return this.http.get<bustype[]>(this.bustype);
   }
-  addBusDetails(data: bus) {
-    this.calculateTravelhours(data.fromtime, data.totime);
+  addBusDetails(data: any) {
+    this.calculateTravelhours(data.fromTime, data.toTime);
     data.travelhours = this.travelHours;
 
     return this.http.post(this.busUrl, data);
@@ -82,5 +82,14 @@ export class AdminService {
     console.log(this.travelHours);
   }
 
-
+deleteBusDetail(id: any){
+  return this.http.delete(this.busUrl+`/${id}`);
+}
+updateBusDetail(bus: bus, busdetails: any){
+  console.log(bus.id)
+  return this.http.put(this.busUrl+`/${bus.id}`, bus);
+}
+getBusDetailsbyId(id:any){
+  return this.http.get(this.busUrl+`?id=${id}`);
+}
 }

@@ -14,7 +14,7 @@ export class MyAccountComponent implements OnInit {
   email: string = '';
 
   bookings: booking[] = [];
-  busDetails: bus[] = [];
+  busDetails: any[] = [];
   passengerDetails: any[] = [];
   constructor(
     private bookingService: BookingsService,
