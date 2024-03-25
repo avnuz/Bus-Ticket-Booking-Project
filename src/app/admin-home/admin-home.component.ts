@@ -21,6 +21,7 @@ export class AdminHomeComponent implements OnInit {
   item: any;
   filteredData: any[] =[];
   isSearch: boolean = false;
+  error: any;
   constructor(
     private admin: AdminService,
     private bookingService: BookingsService,
@@ -42,7 +43,9 @@ export class AdminHomeComponent implements OnInit {
   }
 
   generateSeatArray(seatcount: any, bus: any) {
-    this.seats = new Array(seatcount).fill(0).map((_, index) => index + 1);
+    console.log(seatcount)
+    this.seats = Array.from({ length: seatcount }, (_, index) => index + 1);
+    console.log(this.seats);
   }
   handleBookingData(data: any) {
     console.log(data);
@@ -75,7 +78,11 @@ export class AdminHomeComponent implements OnInit {
     this.admin.getBusDetails().subscribe((result) => {
       this.busDetails = result;
       console.log(this.busDetails);
-    });
+    },
+    (error)=>{
+      this.error= error.message;
+    }
+    );
   }
   onSubmit(data: any) {
     console.log(data);

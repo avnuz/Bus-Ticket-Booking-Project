@@ -1,7 +1,41 @@
-<div class="container main-wrapper">
+<!-- <div class="container main-wrapper">
   <app-header></app-header>
+</div>  -->
+<div class="container" *ngIf="isSideNavbar">
+  <app-side-nav-bar></app-side-nav-bar>
+  <div class=" main-wrapper">
+  <mat-form-field>
+  <mat-label>Select an option</mat-label>
+  <mat-select [(value)]="selected" (selectionChange)="onchange($event)">
+    <mat-option>None</mat-option>
+    <mat-option value="sidebar">side-nav-bar</mat-option>
+    <mat-option value="header">only-header</mat-option>
+
+  </mat-select>
+</mat-form-field>
+ <router-outlet></router-outlet>
 </div>
-       <router-outlet></router-outlet>
+</div>
+
+  <div class="container header-mainwrapper" *ngIf="!isSideNavbar">
+    <app-header></app-header>
+
+  <mat-form-field>
+  <mat-label>Select an option</mat-label>
+  <mat-select [(value)]="selected" (selectionChange)="onchange($event)">
+    <mat-option>None</mat-option>
+    <mat-option value="sidebar">side-nav-bar</mat-option>
+    <mat-option value="header">only-header</mat-option>
+
+  </mat-select>
+</mat-form-field>
+ <router-outlet></router-outlet>
+</div>
+
+
+
+
+
 
 
 

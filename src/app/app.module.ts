@@ -4,7 +4,7 @@ import { Route } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-
+import { MatStepperModule } from '@angular/material/stepper';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -22,6 +22,11 @@ import { NgbPaginationModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootst
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { SeatComponent } from './seat/seat.component';
 import { BusTicketPaymentComponent } from './bus-ticket-payment/bus-ticket-payment.component';
+import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StepperComponent } from './stepper/stepper.component';
 
 
 @NgModule({
@@ -38,7 +43,9 @@ import { BusTicketPaymentComponent } from './bus-ticket-payment/bus-ticket-payme
     BookingsComponent,
     MyAccountComponent,
     SeatComponent,
-    BusTicketPaymentComponent
+    BusTicketPaymentComponent,
+    SideNavBarComponent,
+    StepperComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,9 +55,13 @@ import { BusTicketPaymentComponent } from './bus-ticket-payment/bus-ticket-payme
     NgbModule,
     NgbPaginationModule,
     NgbTypeaheadModule,
-    NgbAccordionModule
+    NgbAccordionModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule,
+    MatStepperModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

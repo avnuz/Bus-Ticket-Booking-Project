@@ -14,7 +14,7 @@ constructor(private route: Router){
 
   }
   ngOnInit(): void {
-
+ console.log('header init entred');
     this.route.events.subscribe((result: any)=>{
       if(result.url){
         if(localStorage.getItem('admin') && result.url.includes('admin')){

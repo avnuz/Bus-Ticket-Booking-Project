@@ -12,6 +12,8 @@ import { canActivateAuthGuard } from './guards/canactivate.guard';
 import { LogincanActivateAuthGuard } from './guards/login-canactivate.guard';
 import { BusTicketPaymentComponent } from './bus-ticket-payment/bus-ticket-payment.component';
 import { MyAccountComponent } from './components/my-account/my-account.component';
+import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
+import { StepperComponent } from './stepper/stepper.component';
 
 const routes: Routes = [
   {
@@ -21,12 +23,12 @@ const routes: Routes = [
 
   {
     path: 'user-Login',
-    component: UserAuthComponent
+    component: UserAuthComponent,
   },
   {
     path: 'Bookings',
     component: BookingsComponent,
-    canActivate: [canActivateAuthGuard]
+    canActivate: [canActivateAuthGuard],
   },
   {
     path: 'admin-home',
@@ -35,13 +37,13 @@ const routes: Routes = [
   {
     path: 'admin-add-busdetails',
     component: AdminAddBusdetailsComponent,
-    canActivate: [canActivateAuthGuard]
+    canActivate: [canActivateAuthGuard],
   },
 
   {
     path: 'admin-buslist',
     component: AdminBuslistComponent,
-    canActivate: [canActivateAuthGuard]
+    canActivate: [canActivateAuthGuard],
   },
   {
     path: 'admin-login',
@@ -51,17 +53,25 @@ const routes: Routes = [
   {
     path: 'payment',
     component: BusTicketPaymentComponent,
-    canActivate: [canActivateAuthGuard]
+    canActivate: [canActivateAuthGuard],
   },
   {
     path: 'my-account',
     component: MyAccountComponent,
-    canActivate: [canActivateAuthGuard]
+    canActivate: [canActivateAuthGuard],
   },
   {
     path: 'admin-update-busDetail/:id',
     component: AdminUpdateBusdetailsComponent,
-    canActivate: [canActivateAuthGuard]
+    canActivate: [canActivateAuthGuard],
+  },
+  {
+    path: 'side-menu',
+    component: SideNavBarComponent,
+  },
+  {
+    path: 'stepper',
+    component: StepperComponent,
   },
 ];
 

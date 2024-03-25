@@ -1,0 +1,107 @@
+<header class="bg-gray p-3 fixed-top header-side">
+  <div [ngSwitch]="menuType" class="header-headname">
+    <button (click)="toggleOnClick()">Toggle Sidebar</button>
+    <!--
+            <div (click)="toggleOnClick()" class="three-vertical-line">
+              <div class="vertical-one"></div>
+              <div class="vertical-one"></div>
+              <div class="vertical-one"></div>
+            </div> -->
+    <a
+      href="#"
+      *ngSwitchCase="'default'"
+      [routerLink]="['/admin-home']"
+      class="navbar-brand h1 mb-0 header-name"
+      >Bus Ticket Booking</a
+    >
+    <a
+      href="#"
+      *ngSwitchCase="'admin'"
+      [routerLink]="['/admin-home']"
+      class="navbar-brand h1 mb-0 header-name"
+      >Bus Ticket Booking</a
+    >
+    <a
+      href="#"
+      *ngSwitchCase="'user'"
+      [routerLink]="['/admin-home']"
+      class="navbar-brand h1 mb-0 header-name"
+      >Bus Ticket Booking</a
+    >
+  </div>
+  <!-- <a href="#" class="navbar-brand h1 text-white">Bus Ticket Booking</a> -->
+</header>
+<div class="container">
+  <div class="row flex-nowrap">
+    <div
+      class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark fixed-top vh-100"
+      [@slideInOut]="sidebarState"
+    >
+      <div
+        class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
+      >
+        <div [ngSwitch]="menuType">
+          <ul class="navbar-nav" *ngSwitchCase="'admin'">
+            <li class="nav-item active">
+              <a routerLink="/admin-home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a routerLink="/admin-add-busdetails" class="nav-link">
+                AddBusDetails</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a routerLink="/admin-buslist" class="nav-link">BusList</a>
+            </li>
+            <li>
+              <div class="logout">
+                <span class="admin-name"> {{ adminName }}</span>
+                <button class="btn btn-primary" (click)="adminlogout()">
+                  Logout
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div [ngSwitch]="menuType">
+          <ul class="navbar-nav" *ngSwitchCase="'default'">
+            <li class="nav-item active">
+              <a routerLink="/admin-home" class="nav-link">Home</a>
+            </li>
+
+            <li class="nav-item active">
+              <a routerLink="/admin-login" class="nav-link"> Admin-login</a>
+            </li>
+            <li class="nav-item active">
+              <a routerLink="/user-Login" class="nav-link">user login/signup</a>
+            </li>
+          </ul>
+        </div>
+
+        <div [ngSwitch]="menuType">
+          <ul class="navbar-nav" *ngSwitchCase="'user'">
+            <li class="nav-item active">
+              <a routerLink="/admin-home" class="nav-link">Home</a>
+            </li>
+
+            <li class="nav-item active">
+              <a routerLink="/Bookings" class="nav-link"> Bookings</a>
+            </li>
+            <li class="nav-item active">
+              <a routerLink="/my-account" class="nav-link">My Account</a>
+            </li>
+            <li>
+              <div class="logout">
+                <span class="admin-name">{{ userName }}</span>
+                <button class="btn btn-primary" (click)="userlogout()">
+                  Logout
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col py-3">Content area...</div>
+  </div>
+</div>

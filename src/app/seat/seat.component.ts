@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { BookingsService } from '../services/bookings.service';
 import { booking, bus } from '../../dataType';
 import { Router } from '@angular/router';
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './seat.component.html',
   styleUrls: ['./seat.component.scss'],
 })
-export class SeatComponent implements OnInit {
+export class SeatComponent implements OnInit, OnChanges {
   @Input() seat: any;
   @Input() busid: any;
   @Input() userid: any;
@@ -40,18 +40,23 @@ export class SeatComponent implements OnInit {
     });
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+
+  }
+
   getSeatnumber() {
     if (localStorage.getItem('admin') || localStorage.getItem('user')) {
+      console.log("entered")
       this.isSelected = true;
 
       this.data = {
         seat: this.seat,
         busno: this.busid,
         userid: JSON.parse(this.userid).id,
-        fromdate: this.Bus.fromdate,
-        Todate: this.Bus.todate,
-        fromtime: this.Bus.fromtime,
-        totime: this.Bus.totime,
+        fromdate: this.Bus.fromDate,
+        Todate: this.Bus.toDate,
+        fromtime: this.Bus.fromTime,
+        totime: this.Bus.toTime,
       };
       this.bookingSeatData.push(this.data);
       console.log(this.data);
@@ -77,7 +82,9 @@ export class SeatComponent implements OnInit {
     this.bookingService.getBookings().subscribe((result) => {
       if (Array.isArray(result)) {
         result.forEach((element) => {
+
           if (this.Bus.id === element.busno && this.seat === element.seat) {
+
             this.isSelected = true;
           } else {
             this.isSelected = false;

@@ -27,7 +27,8 @@
       "contact": "+91-8296000925",
       "bustype": "AC Sleepers",
       "id": "8071",
-      "price": "650"
+      "price": "650",
+      "seat": "15"
     },
     {
       "name": "Pragathi Travels",
@@ -40,7 +41,8 @@
       "contact": "+91-83456789284",
       "bustype": "AC Seater",
       "id": "bfbd",
-      "price": "700"
+      "price": "700",
+      "seat" : "30"
     }
   ],
   "origin": [

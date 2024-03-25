@@ -1,5 +1,41 @@
 .main-wrapper{
-  margin-top: 82px !important;
+     margin-left: 250px !important;
+
+}
+.header-mainwrapper{
+  margin-top: 80px;
+}
+.vertical-one {
+    border: 0.5px solid black;
+    width: 20px;
+    margin-top: 2px;
+}
+.three-vertical-line{
+  margin-top: 3px;
+  margin-left: 1px;
+  width: 20px;
+}
+header.bg-gray.p-3.header-side {
+    width: 1448px;
+    background-color: #e5e4e2 !important;
+    padding: 0 !important;
+    margin-top: -10px !important;
+    margin-left: -25px;
+
+    height: 50px;
+    z-index: 1;
+
+}
+.col-auto.col-md-3.col-xl-2.px-sm-2.px-0.bg-dark.fixed-top.vh-100.ng-tns-c49615406-0.ng-trigger.ng-trigger-slideInOut{
+  z-index: 0;
+}
+.header-headname {
+    margin-top: 12px;
+}
+a.navbar-brand.h1.mb-0.header-name {
+    margin-left: 35px;
+    color: black;
+
 }
 .admin-auth {
     width: 300px;
@@ -31,8 +67,8 @@ p.al-ac {
 
 }
 .logout{
-display: flex;
-margin-left: 420px;
+
+margin-top: 370px;
 }
 a.click-here{
   cursor: pointer;
@@ -92,7 +128,7 @@ span.bus-data {
 }
 .row.no-gutters {
     margin-left: 0;
-    margin-right: 979px;
+   margin-right: 876px;
 }
 .row-spacing {
   margin-top: 10px; /* Adjust the value to control the space between rows */
@@ -222,5 +258,11 @@ input.input-search{
  margin-left: 93px;
     margin-bottom: 3px;
 }
+.color-text{
+  color: white !important;
+}
 @import 'bootstrap/scss/bootstrap';
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
